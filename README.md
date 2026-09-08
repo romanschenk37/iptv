@@ -83,10 +83,10 @@ shards, so one guide URL works with every generated playlist.
 
 | Playlist | Contents | URL |
 | --- | --- | --- |
-| **Best** | One stream per channel, best first | `https://dearbulut.github.io/iptv/playlists/best.m3u` |
-| **Working only** | Only streams that passed the last health check | `https://dearbulut.github.io/iptv/playlists/online.m3u` |
-| **Everything** | Every stream, including backups | `https://dearbulut.github.io/iptv/playlists/index.m3u` |
-| **EPG** | Programme guide for every linked channel | `https://dearbulut.github.io/iptv/epg/guide.xml.gz` |
+| **Best** | One stream per channel, best first | `https://romanschenk37.github.io/iptv/playlists/best.m3u` |
+| **Working only** | Only streams that passed the last health check | `https://romanschenk37.github.io/iptv/playlists/online.m3u` |
+| **Everything** | Every stream, including backups | `https://romanschenk37.github.io/iptv/playlists/index.m3u` |
+| **EPG** | Programme guide for every linked channel | `https://romanschenk37.github.io/iptv/epg/guide.xml.gz` |
 
 Per-country, per-category and per-language playlists: [**PLAYLISTS.md**](PLAYLISTS.md).
 
