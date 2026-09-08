@@ -8,12 +8,14 @@ on:
   schedule:
     # 00:15, 06:15, 12:15 and 18:15 UTC.
     - cron: '15 0,6,12,18 * * *'
+
   workflow_dispatch:
     inputs:
       skip_epg:
         description: 'Skip the EPG rebuild'
         type: boolean
         default: false
+
   push:
     branches: [main]
     paths:
@@ -42,9 +44,11 @@ jobs:
     name: Build API
     runs-on: ubuntu-latest
     timeout-minutes: 60
+
     outputs:
       channels: ${{ steps.summary.outputs.channels }}
       streams: ${{ steps.summary.outputs.streams }}
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -82,18 +86,23 @@ jobs:
           NEXUS_REPOSITORY: ${{ github.server_url }}/${{ github.repository }}
         run: npm run cli -- aggregate
 
-      - name: Build EPG
-        if: ${{ inputs.skip_epg != true }}
-        continue-on-error: true
-        env:
-          NEXUS_BASE_URL: ${{ format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
-        run: npm run cli -- epg
-
+      # IMPORTANT:
+      # Build the static API/site FIRST because --clean removes the entire
+      # public directory. If EPG is built before this step, public/epg gets
+      # deleted again.
       - name: Build static API and site
         env:
           NEXUS_BASE_URL: ${{ format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
           NEXUS_REPOSITORY: ${{ github.server_url }}/${{ github.repository }}
         run: npm run cli -- api --clean
+
+      # Build the EPG AFTER api --clean so public/epg survives until the
+      # GitHub Pages artifact is uploaded.
+      - name: Build EPG
+        if: ${{ inputs.skip_epg != true }}
+        env:
+          NEXUS_BASE_URL: ${{ format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
+        run: npm run cli -- epg
 
       - name: Summarise
         id: summary
@@ -119,7 +128,7 @@ jobs:
             echo "Catalogue unchanged"
             exit 0
           fi
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add PLAYLISTS.md README.md
           git commit -m "docs: refresh playlist catalogue"
@@ -136,9 +145,11 @@ jobs:
     name: Deploy to Pages
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
