@@ -90,18 +90,30 @@ export function linkEpgChannels(
       continue;
     }
 
-    // 2. The EPG id often *is* the channel id (`BBCNews.uk`).
-    const direct = index.byId.get(epgChannel.id) ?? index.byLowerId.get(epgChannel.id.toLowerCase());
-    if (direct) {
-      links.set(epgChannel.id, {
-        channel: direct.id,
-        site_id: epgChannel.id,
-        site: bundle.site,
-        confidence: 0.99,
-        method: 'exact',
-      });
-      continue;
-    }
+// 2. The EPG id often *is* the channel id (`BBCNews.uk`).
+// Some EPG sources use feed-qualified ids such as `SRFzwei.ch@SD`.
+// Generated Nexus playlists use the base channel id (`SRFzwei.ch`),
+// so try both forms.
+const baseId = epgChannel.id.split('@')[0];
+
+const direct =
+  index.byId.get(epgChannel.id) ??
+  index.byLowerId.get(epgChannel.id.toLowerCase()) ??
+  (baseId
+    ? index.byId.get(baseId) ??
+      index.byLowerId.get(baseId.toLowerCase())
+    : undefined);
+
+if (direct) {
+  links.set(epgChannel.id, {
+    channel: direct.id,
+    site_id: epgChannel.id,
+    site: bundle.site,
+    confidence: 0.99,
+    method: 'exact',
+  });
+  continue;
+}
 
     // 3. Fuzzy match on display names, narrowed by the source's countries.
     const match = resolveEpgChannel(
