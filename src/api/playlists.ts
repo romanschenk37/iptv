@@ -188,22 +188,43 @@ export async function buildPlaylists(
     },
   ];
 
-  for (const { directory, buckets, label } of shardGroups) {
-    for (const [key, bucket] of buckets) {
-      const entries: M3uEntry[] = [];
-      for (const channel of bucket) {
-        const best = playableStreams(channel, settings, true)[0];
-        if (best) entries.push(toEntry(channel, best, context, groupFor(channel)));
-      }
+for (const { directory, buckets, label } of shardGroups) {
+  for (const [key, bucket] of buckets) {
+    const entries: M3uEntry[] = [];
+
+    for (const channel of bucket) {
+      const best = playableStreams(channel, settings, true)[0];
+      if (best) entries.push(toEntry(channel, best, context, groupFor(channel)));
+    }
+
+    // Normal filtered playlist
+    await write(
+      `${directory}/${slugify(key) || key}.m3u`,
+      label(key),
+      directory,
+      entries,
+      bucket.length,
+    );
+
+    // Additionally create health-filtered language playlists
+    if (directory === 'language') {
+      const healthyEntries = entries.filter((entry) =>
+        Number.parseInt(
+          entry.attributes['nexus-score'] ?? '0',
+          10,
+        ) >= settings.health.healthy_threshold
+      );
+
       await write(
-        `${directory}/${slugify(key) || key}.m3u`,
-        label(key),
-        directory,
-        entries,
-        bucket.length,
+        `language-online/${slugify(key) || key}.m3u`,
+        `${label(key)} — Working only`,
+        'language-online',
+        healthyEntries,
+        healthyEntries.length,
       );
     }
   }
+}
 
   log.success(`Generated ${files.length} playlist file(s), ${totalEntries} entries`);
   return { files, total_entries: totalEntries };
