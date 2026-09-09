@@ -10,7 +10,25 @@ const parser = new XMLParser({
   parseAttributeValue: false,
   parseTagValue: false,
   trimValues: true,
-  isArray: (name) => ['channel', 'programme', 'display-name', 'category', 'icon'].includes(name),
+
+  // Large XMLTV feeds legitimately contain far more than 1000 XML entity
+  // references (for example &amp; in titles/descriptions). fast-xml-parser
+  // 4.5.x defaults to only 1000 total expansions, which causes large EPG
+  // sources such as tv.blue.ch and MagentaTV to be rejected.
+  //
+  // Keep finite limits for protection against malicious entity expansion,
+  // but make them large enough for real-world XMLTV feeds.
+  processEntities: {
+    enabled: true,
+    maxEntitySize: 10_000,
+    maxExpansionDepth: 10,
+    maxTotalExpansions: 1_000_000,
+    maxExpandedLength: 50_000_000,
+    maxEntityCount: 1_000,
+  },
+
+  isArray: (name) =>
+    ['channel', 'programme', 'display-name', 'category', 'icon'].includes(name),
 });
 
 type XmlNode = Record<string, unknown>;
