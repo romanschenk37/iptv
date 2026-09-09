@@ -98,3 +98,37 @@ sites:
     enabled: true
     timeout: 30000
     max_connections: 5
+
+  # --- Switzerland ---------------------------------------------------------
+
+  - site: tv.blue.ch
+    lang: de
+    countries: [CH]
+    enabled: true
+    timeout: 30000
+    max_connections: 5
+
+  # --- Germany -------------------------------------------------------------
+
+  - site: web.magentatv.de
+    lang: de
+    countries: [DE]
+    enabled: true
+    timeout: 30000
+    max_connections: 5
+
+  # --- Austria -------------------------------------------------------------
+
+  - site: tv.magenta.at
+    lang: de
+    countries: [AT]
+    enabled: true
+    timeout: 30000
+    max_connections: 5
+
+  - site: tvheute.at
+    lang: de
+    countries: [AT]
+    enabled: true
+    timeout: 30000
+    max_connections: 5
