@@ -25,9 +25,17 @@ sources:
   - id: discovered
     name: Auto-discovered streams
     type: m3u
-    url: https://raw.githubusercontent.com/dearbulut/iptv/main/config/discovered.m3u
+    url: https://raw.githubusercontent.com/romanschenk37/iptv/main/config/discovered.m3u
     enabled: true
     trust: 0.35
+
+  - id: dach-extra
+    name: DACH Extra
+    type: m3u
+    url: https://raw.githubusercontent.com/romanschenk37/iptv/main/config/dach-extra.m3u
+    enabled: true
+    trust: 0.8
+    country: CH
 
   # --- Public broadcaster / free-to-air streams -----------------------------
   # These are official, publicly documented FAST feeds. Uncomment what you want.
