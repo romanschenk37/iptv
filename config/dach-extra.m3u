@@ -1,0 +1,10 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="SRF1.ch" tvg-country="CH" tvg-language="deu" group-title="Schweiz",SRF 1
+https://viamotionhsi.netplus.ch/live/eds/srf1hd/browser-HLS8/srf1hd.m3u8
+
+#EXTINF:-1 tvg-id="SRFzwei.ch" tvg-country="CH" tvg-language="deu" group-title="Schweiz",SRF zwei
+https://viamotionhsi.netplus.ch/live/eds/srf2hd/browser-HLS8/srf2hd.m3u8
+
+#EXTINF:-1 tvg-id="SRFinfo.ch" tvg-country="CH" tvg-language="deu" group-title="Schweiz",SRF info
+https://viamotionhsi.netplus.ch/live/eds/srfinfo/browser-HLS8/srfinfo.m3u8
