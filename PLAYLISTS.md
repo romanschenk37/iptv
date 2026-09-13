@@ -1,9 +1,9 @@
 # Playlists
 
 > Generated automatically — do not edit by hand.
-> Last updated **2026-09-12 20:30 UTC**.
+> Last updated **2026-09-13 04:41 UTC**.
 
-9,909 channels with a working stream, out of 29,931 indexed. 12,314 streams responded on the last scan.
+9,915 channels with a working stream, out of 29,931 indexed. 12,314 streams responded on the last scan.
 
 ## Main playlists
 
@@ -38,7 +38,7 @@ One playlist per country, best stream per channel.
 
 | Country | Channels | Streams | URL |
 | --- | ---: | ---: | --- |
-| 🇺🇸 United States | 1,576 | 1,576 | `https://romanschenk37.github.io/iptv/playlists/country/us.m3u` |
+| 🇺🇸 United States | 1,574 | 1,574 | `https://romanschenk37.github.io/iptv/playlists/country/us.m3u` |
 | 🇮🇳 India | 701 | 701 | `https://romanschenk37.github.io/iptv/playlists/country/in.m3u` |
 | 🇷🇺 Russia | 442 | 442 | `https://romanschenk37.github.io/iptv/playlists/country/ru.m3u` |
 | 🇩🇪 Germany | 418 | 418 | `https://romanschenk37.github.io/iptv/playlists/country/de.m3u` |
@@ -54,15 +54,15 @@ One playlist per country, best stream per channel.
 | 🇫🇷 France | 177 | 177 | `https://romanschenk37.github.io/iptv/playlists/country/fr.m3u` |
 | 🇵🇪 Peru | 171 | 171 | `https://romanschenk37.github.io/iptv/playlists/country/pe.m3u` |
 | 🇳🇱 Netherlands | 170 | 170 | `https://romanschenk37.github.io/iptv/playlists/country/nl.m3u` |
-| 🇦🇷 Argentina | 167 | 167 | `https://romanschenk37.github.io/iptv/playlists/country/ar.m3u` |
+| 🇦🇷 Argentina | 169 | 169 | `https://romanschenk37.github.io/iptv/playlists/country/ar.m3u` |
 | 🇲🇽 Mexico | 157 | 157 | `https://romanschenk37.github.io/iptv/playlists/country/mx.m3u` |
 | 🇨🇳 China | 149 | 149 | `https://romanschenk37.github.io/iptv/playlists/country/cn.m3u` |
 | 🇭🇺 Hungary | 132 | 132 | `https://romanschenk37.github.io/iptv/playlists/country/hu.m3u` |
-| 🇮🇩 Indonesia | 129 | 129 | `https://romanschenk37.github.io/iptv/playlists/country/id.m3u` |
+| 🇮🇩 Indonesia | 130 | 130 | `https://romanschenk37.github.io/iptv/playlists/country/id.m3u` |
 | 🇨🇦 Canada | 128 | 128 | `https://romanschenk37.github.io/iptv/playlists/country/ca.m3u` |
 | 🇮🇷 Iran | 120 | 120 | `https://romanschenk37.github.io/iptv/playlists/country/ir.m3u` |
 | 🇨🇴 Colombia | 109 | 109 | `https://romanschenk37.github.io/iptv/playlists/country/co.m3u` |
-| 🇷🇴 Romania | 103 | 103 | `https://romanschenk37.github.io/iptv/playlists/country/ro.m3u` |
+| 🇷🇴 Romania | 108 | 108 | `https://romanschenk37.github.io/iptv/playlists/country/ro.m3u` |
 | 🇵🇱 Poland | 94 | 94 | `https://romanschenk37.github.io/iptv/playlists/country/pl.m3u` |
 | 🇵🇰 Pakistan | 90 | 90 | `https://romanschenk37.github.io/iptv/playlists/country/pk.m3u` |
 | 🇻🇳 Vietnam | 81 | 81 | `https://romanschenk37.github.io/iptv/playlists/country/vn.m3u` |
@@ -228,8 +228,8 @@ One playlist per category — news, sports, movies, music and so on.
 | Category | Channels | Streams | URL |
 | --- | ---: | ---: | --- |
 | General | 2,465 | 2,465 | `https://romanschenk37.github.io/iptv/playlists/category/general.m3u` |
-| News | 935 | 935 | `https://romanschenk37.github.io/iptv/playlists/category/news.m3u` |
-| Entertainment | 768 | 768 | `https://romanschenk37.github.io/iptv/playlists/category/entertainment.m3u` |
+| News | 937 | 937 | `https://romanschenk37.github.io/iptv/playlists/category/news.m3u` |
+| Entertainment | 770 | 770 | `https://romanschenk37.github.io/iptv/playlists/category/entertainment.m3u` |
 | Religious | 731 | 731 | `https://romanschenk37.github.io/iptv/playlists/category/religious.m3u` |
 | Music | 711 | 711 | `https://romanschenk37.github.io/iptv/playlists/category/music.m3u` |
 | Movies | 590 | 590 | `https://romanschenk37.github.io/iptv/playlists/category/movies.m3u` |
@@ -255,7 +255,7 @@ One playlist per category — news, sports, movies, music and so on.
 | Science | 20 | 20 | `https://romanschenk37.github.io/iptv/playlists/category/science.m3u` |
 | Weather | 16 | 16 | `https://romanschenk37.github.io/iptv/playlists/category/weather.m3u` |
 | Relax | 9 | 9 | `https://romanschenk37.github.io/iptv/playlists/category/relax.m3u` |
-| Interactive | 1 | 1 | `https://romanschenk37.github.io/iptv/playlists/category/interactive.m3u` |
+| Interactive | 2 | 2 | `https://romanschenk37.github.io/iptv/playlists/category/interactive.m3u` |
 
 </details>
 
@@ -268,7 +268,7 @@ One playlist per broadcast language.
 
 | Language | Channels | Streams | URL |
 | --- | ---: | ---: | --- |
-| English | 2,501 | 2,501 | `https://romanschenk37.github.io/iptv/playlists/language/eng.m3u` |
+| English | 2,499 | 2,499 | `https://romanschenk37.github.io/iptv/playlists/language/eng.m3u` |
 | Spanish | 2,286 | 2,286 | `https://romanschenk37.github.io/iptv/playlists/language/spa.m3u` |
 | Russian | 571 | 571 | `https://romanschenk37.github.io/iptv/playlists/language/rus.m3u` |
 | Portuguese | 473 | 473 | `https://romanschenk37.github.io/iptv/playlists/language/por.m3u` |
@@ -285,8 +285,8 @@ One playlist per broadcast language.
 | Danish | 157 | 157 | `https://romanschenk37.github.io/iptv/playlists/language/dan.m3u` |
 | Hungarian | 146 | 146 | `https://romanschenk37.github.io/iptv/playlists/language/hun.m3u` |
 | Swedish | 139 | 139 | `https://romanschenk37.github.io/iptv/playlists/language/swe.m3u` |
-| Romanian | 134 | 134 | `https://romanschenk37.github.io/iptv/playlists/language/ron.m3u` |
-| Indonesian | 134 | 134 | `https://romanschenk37.github.io/iptv/playlists/language/ind.m3u` |
+| Romanian | 139 | 139 | `https://romanschenk37.github.io/iptv/playlists/language/ron.m3u` |
+| Indonesian | 135 | 135 | `https://romanschenk37.github.io/iptv/playlists/language/ind.m3u` |
 | Norwegian | 120 | 120 | `https://romanschenk37.github.io/iptv/playlists/language/nor.m3u` |
 | Tamil | 114 | 114 | `https://romanschenk37.github.io/iptv/playlists/language/tam.m3u` |
 | Vietnamese | 99 | 99 | `https://romanschenk37.github.io/iptv/playlists/language/vie.m3u` |
